@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Question from '../components/Question'
 import { useNavigate } from 'react-router-dom';
 
@@ -143,6 +143,12 @@ export default function Test() {
       });
     }
   }
+
+  useEffect(()=>{
+    const user: string|null = localStorage.getItem('user');
+    if(!user)
+      navigate('/')
+  }, [])
 
   return (
     <>

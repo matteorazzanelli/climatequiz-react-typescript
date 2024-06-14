@@ -12,7 +12,6 @@ export default function Question(
 
   return (
     <>
-      {console.log(data)}
       <fieldset id={data.id.toString()}>
         <legend>Q{data.id+1}: {data.question}</legend>
         

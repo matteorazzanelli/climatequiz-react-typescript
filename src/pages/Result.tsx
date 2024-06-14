@@ -10,6 +10,9 @@ export default function Result() {
   const [judgment, setJudgment] = useState('');
 
   useEffect(()=>{
+    const user: string|null = localStorage.getItem('user');
+    if(!user)
+      navigate('/')
     const correctAnswers: number[] = location.state.correctAnswers;
     const givenAnswers: number[] = location.state.givenAnswers
     const tmp: number = correctAnswers.reduce((acc, el, idx)=>givenAnswers[idx]===el ? 1+acc : acc, 0)
@@ -31,7 +34,7 @@ export default function Result() {
   return (
     <>
       <h1 style={{textAlign: 'center'}}>
-        Il tuo risultato è {result}
+        {localStorage.getItem('user')} il tuo risultato è {result}
       </h1>
       <p style={{textAlign: 'center', fontSize: '24px'}}>{judgment}</p>
       <button className='submit-btn' onClick={handleRerun}>RICOMINCIA</button>

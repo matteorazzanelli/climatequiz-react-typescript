@@ -19,7 +19,7 @@ export default function Signin() {
     const tmpError: string = user.trim().length<3 ? 'Name is too short' : '';
     setError(tmpError);
     if(!tmpError){
-      localStorage.setItem('user-info', JSON.stringify(user))
+      localStorage.setItem('user', JSON.stringify(user))
       navigate('/test');
     }
   };
