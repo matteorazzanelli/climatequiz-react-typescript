@@ -45,10 +45,12 @@ export default function Result() {
       <h1 style={{ textAlign: "center" }}>
         {localStorage.getItem("user")} your result is... {result}
       </h1>
-      <p style={{ textAlign: "center", fontSize: "24px" }}>{judgment}</p>
-      <button className="submit-btn" onClick={handleRerun}>
-        RERUN THE TEST
-      </button>
+      <div className="show-result">
+        <p style={{ textAlign: "center", fontSize: "24px" }}>{judgment}</p>
+        <button className="submit-btn" onClick={handleRerun}>
+          RERUN THE TEST
+        </button>
+      </div>
     </>
   );
 }

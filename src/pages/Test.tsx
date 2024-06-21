@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Question from "../components/Question";
 import { useNavigate } from "react-router-dom";
+import '../styles/Test.css'
 
 export default function Test() {
   const navigate = useNavigate();
@@ -150,7 +151,7 @@ export default function Test() {
 
   return (
     <>
-      <h1>Test</h1>
+      <h1 className="test-header">Test</h1>
       {testItems.map((item, index) => {
         return (
           <Question
@@ -173,10 +174,12 @@ export default function Test() {
           />
         );
       })}
-      {error && <span className="error-msg">{error}</span>}
-      <button className="submit-btn" onClick={handleSubmit}>
-        SHOW RESULTS
-      </button>
+      <div className="show-result">
+        {error && <div className="error-msg">{error}</div>}
+        <button className="submit-btn" onClick={handleSubmit}>
+          SHOW RESULTS
+        </button>
+      </div>
     </>
   );
 }

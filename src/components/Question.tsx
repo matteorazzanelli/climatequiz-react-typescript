@@ -16,7 +16,7 @@ export default function Question({
 }) {
   return (
     <>
-      <fieldset id={data.id.toString()}>
+      <fieldset id={data.id.toString()} className="test-fieldset">
         <legend>
           Q{data.id + 1}: {data.question}
         </legend>
