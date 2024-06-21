@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdPerson2 } from "react-icons/md";
 import "../styles/Signin.css";
@@ -22,6 +22,13 @@ export default function Signin() {
       navigate("/test");
     }
   };
+
+  useEffect(()=>{
+
+    const tmpUser = localStorage.getItem("user");
+    if(tmpUser)
+      setUser(JSON.parse(tmpUser));
+  })
 
   return (
     <div className="form-container">
