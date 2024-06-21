@@ -54,10 +54,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Usage
 
-- In the main page enter a valid name
-- Then press "Comincia" to start the test
+- In the main page enter a valid name (at least 3 characters)
+- Then press "START THE TEST"
 - Select and option for all the 10 questions
-- Click 'Mostra risultati' to check your result!
+- Click 'SHOW RESULTS' to check your result!
 
 <!-- TECHINCAL -->
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdPerson2 } from "react-icons/md";
 import "../styles/Signin.css";
@@ -23,6 +23,13 @@ export default function Signin() {
     }
   };
 
+  useEffect(()=>{
+
+    const tmpUser = localStorage.getItem("user");
+    if(tmpUser)
+      setUser(JSON.parse(tmpUser));
+  })
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -32,14 +39,14 @@ export default function Signin() {
           </div>
           <input
             type="text"
-            placeholder="Inserisci il tuo nome"
+            placeholder="Insert your name"
             name="name"
             value={user}
             onChange={handleUserChange}
           />
           {error && <span className="error-msg">{error}</span>}
         </div>
-        <button className="submit-btn">COMINCIA</button>
+        <button className="submit-btn">START THE TEST</button>
       </form>
     </div>
   );

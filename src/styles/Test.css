@@ -1,0 +1,29 @@
+.test-header{
+  text-align: center;
+  font-size: 40px;
+  color: blueviolet;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.test-fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.test-fieldset > legend {
+  font-weight: 700;
+}
+
+.show-result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}

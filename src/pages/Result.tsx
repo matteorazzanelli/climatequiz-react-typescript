@@ -20,19 +20,19 @@ export default function Result() {
     setResult(tmp);
     if (tmp >= 0 && tmp <= 3)
       setJudgment(
-        "BASE: Hai iniziato il tuo viaggio per comprendere meglio il cambiamento climatico. Continua a informarti e presto vedrai miglioramenti!",
+        "BASIC: You have begun your journey to better understand climate change. Keep informing yourself and you will soon see improvements!"
       );
     if (tmp >= 4 && tmp <= 7)
       setJudgment(
-        "INTERMEDIO: Hai una conoscenza di base sul cambiamento climatico, ma c'è ancora spazio per approfondire. Continua a esplorare e imparare!",
+        "INTERMEDIATE: You have a basic understanding of climate change, but there is still room to go deeper. Keep exploring and learning!"
       );
     if (tmp == 8 || tmp == 9)
       setJudgment(
-        "ESPERTO/A: Hai una buona comprensione delle questioni relative al cambiamento climatico. Sei sulla strada giusta per diventare un esperto!",
+        "EXPERT: You have a good understanding of climate change issues. You are on your way to becoming an expert!"
       );
     if (tmp === 10)
       setJudgment(
-        "MAESTRO/A: Complimenti! Hai una conoscenza eccellente sul cambiamento climatico. Il tuo impegno per l'ambiente è evidente e ispiratore!",
+        "MASTER: Congratulations! You have excellent knowledge about climate change. Your commitment to the environment is evident and inspiring!"
       );
   }, []);
 
@@ -43,12 +43,14 @@ export default function Result() {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>
-        {localStorage.getItem("user")} il tuo risultato è {result}
+        {localStorage.getItem("user")} your result is... {result}
       </h1>
-      <p style={{ textAlign: "center", fontSize: "24px" }}>{judgment}</p>
-      <button className="submit-btn" onClick={handleRerun}>
-        RICOMINCIA
-      </button>
+      <div className="show-result">
+        <p style={{ textAlign: "center", fontSize: "24px" }}>{judgment}</p>
+        <button className="submit-btn" onClick={handleRerun}>
+          RERUN THE TEST
+        </button>
+      </div>
     </>
   );
 }

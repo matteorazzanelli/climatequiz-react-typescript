@@ -1,116 +1,116 @@
 import React, { useEffect, useState } from "react";
 import Question from "../components/Question";
 import { useNavigate } from "react-router-dom";
+import '../styles/Test.css'
 
 export default function Test() {
   const navigate = useNavigate();
 
   const [testItems, setItems] = useState([
     {
-      question: "Qual è la principale causa del riscaldamento globale?",
-      answers: [
-        "La deforestazione",
-        "L'inquinamento dell'acqua",
-        "L'uso eccessivo di fertilizzanti",
-        "L'emissione di gas serra",
+      question: "What is the main cause of global warming?",
+      answers:[
+        "Deforestation.",
+        "Water pollution.",
+        "The overuse of fertilizer",
+        "The emission of greenhouse gases."
       ],
       correctIndex: 3,
       checked: -1,
     },
     {
-      question: "Che cos'è l'effetto serra?",
+      question: "What is the greenhouse effect?",
       answers: [
-        "Un tipo di inquinamento atmosferico",
-        "Il riscaldamento della superficie terrestre causato dai gas serra",
-        "Un fenomeno che causa il raffreddamento globale",
-        "La riduzione dello strato di ozono",
+        "A type of air pollution.",
+        "The warming of the earth's surface caused by greenhouse gases.",
+        "A phenomenon that causes global cooling",
+        "The depletion of the ozone layer."
       ],
       correctIndex: 1,
       checked: -1,
     },
     {
-      question:
-        "Quale gas serra contribuisce maggiormente al cambiamento climatico?",
-      answers: ["Ossigeno", "Azoto", "Andride carbonica", "Idrogeno"],
+      question: "Which greenhouse gas contributes most to climate change?",
+      answers: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
       correctIndex: 2,
       checked: -1,
     },
     {
-      question: "Cosa si intende per 'impronta di carbonio'?",
+      question: "What is meant by 'carbon footprint'?",
       answers: [
-        "La quantità di carbonio presente nel suolo",
-        "Il segno lasciato dai combustibili fossili",
-        "La quantità totale di gas serra emessi da un individuo, organizzazione o prodotto",
-        "Una misura della biodiversità forestale",
+        "The amount of carbon in the soil.",
+        "The mark left by fossil fuels.",
+        "The total amount of greenhouse gases emitted by an individual, organization or product.",
+        "A measure of forest biodiversity."
       ],
       correctIndex: 2,
       checked: -1,
     },
     {
-      question: "Quale tra questi è un effetto del cambiamento climatico?",
+      question: "Which of the following is an effect of climate change?",
       answers: [
-        "Aumento delle precipitazioni nevose",
-        "Diminuzione del livello del mare",
-        "Riduzione della biodiversità",
-        "Miglioramento della qualità dell'aria",
+        "Increased snowfall.",
+        "Decreased sea level",
+        "Decreased biodiversity.",
+        "Improved air quality."
       ],
       correctIndex: 2,
       checked: -1,
     },
     {
       question:
-        "Come possono gli alberi aiutare a combattere il cambiamento climatico?",
+        "How can trees help fight climate change?",
       answers: [
-        "Assorbendo anidride carbonica",
-        "Rilasciando ossigeno durante la notte",
-        "Fornendo ombra alle città",
-        "Creando pioggia artificiale",
+        "By absorbing carbon dioxide.",
+        "By releasing oxygen at night.",
+        "By providing shade for cities.",
+        "By creating artificial rain."
       ],
       correctIndex: 0,
       checked: -1,
     },
     {
-      question: "Che cos'è l'Accordo di Parigi sul clima?",
+      question: "What is the Paris Climate Agreement?",
       answers: [
-        "Un trattato per proteggere le specie in via di estinzione",
-        "Un accordo internazionale per ridurre l'uso di plastica",
-        "Un patto globale per limitare l'aumento della temperatura media mondiale",
-        "Una conferenza annuale sul turismo sostenibile",
+        "A treaty to protect endangered species.",
+        "An international agreement to reduce the use of plastics.",
+        "A global pact to limit global average temperature rise.",
+        "An annual conference on sustainable tourism."
       ],
       correctIndex: 2,
       checked: -1,
     },
     {
       question:
-        "Qual è uno dei modi più efficaci per ridurre la propria impronta di carbonio?",
+        "What is one of the most effective ways to reduce one's carbon footprint?",
       answers: [
-        "Viaggiare di più in aereo",
-        "Aumentare il consumo di carne",
-        "Utilizzare energie rinnovabili",
-        "Comprare più prodotti in plastica",
+        "Travel more by air.",
+        "Increase meat consumption.",
+        "Use renewable energy.",
+        "Buy more plastic products."
       ],
       correctIndex: 2,
       checked: -1,
     },
     {
-      question: "Cosa significa sostenibilità?",
+      question: "What does sustainability mean?",
       answers: [
-        "Sviluppare in modo che soddisfi le esigenze del presente senza compromettere la capacità delle generazioni future di soddisfare le proprie",
-        "Aumentare la produzione industriale",
-        "Costruire più infrastrutture urbane",
-        "Ridurre il numero di specie protette",
+        "Developing in a way that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+        "Increasing industrial production.",
+        "Building more urban infrastructure.",
+        "Reduce the number of protected species."
       ],
       correctIndex: 0,
       checked: -1,
     },
     {
       question:
-        "Quale tecnologia è considerata una soluzione rinnovabile per l'energia?",
+        "Which technology is considered a renewable energy solution?",
       answers: [
-        "Il carbone",
-        "L'energia solare",
-        "Il petrolio",
-        "Il gas naturale",
+        "Coal.",
+        "Solar energy.",
+        "Oil.",
+        "Natural gas."
       ],
       correctIndex: 1,
       checked: -1,
@@ -151,7 +151,7 @@ export default function Test() {
 
   return (
     <>
-      <h1>Test</h1>
+      <h1 className="test-header">Test</h1>
       {testItems.map((item, index) => {
         return (
           <Question
@@ -174,10 +174,12 @@ export default function Test() {
           />
         );
       })}
-      {error && <span className="error-msg">{error}</span>}
-      <button className="submit-btn" onClick={handleSubmit}>
-        MOSTRA RISULTATI
-      </button>
+      <div className="show-result">
+        {error && <div className="error-msg">{error}</div>}
+        <button className="submit-btn" onClick={handleSubmit}>
+          SHOW RESULTS
+        </button>
+      </div>
     </>
   );
 }
