@@ -5,7 +5,7 @@ export default function Start() {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>
-        Test sul cambiamento climatico: quante ne sai?
+        Climate change test: how many do you know?
       </h1>
       <div
         style={{
@@ -16,12 +16,12 @@ export default function Start() {
           paddingRight: "100px",
         }}
       >
-        Partecipa al nostro quiz per vedere quanto ne sai sull'ambiente e sul
-        cambiamento climatico.
+        Take our quiz to see how much you know about the environment and
+        climate change.
         <br />
         <br />
-        Alla fine riceverai un punteggio da 0 a 10 da poter condividere con i
-        tuoi amici sui social!
+        At the end you will receive a score from 0 to 10 that you can share with
+        your friends on social media!
       </div>
       <Signin />
     </>

@@ -32,14 +32,14 @@ export default function Signin() {
           </div>
           <input
             type="text"
-            placeholder="Inserisci il tuo nome"
+            placeholder="Insert your name"
             name="name"
             value={user}
             onChange={handleUserChange}
           />
           {error && <span className="error-msg">{error}</span>}
         </div>
-        <button className="submit-btn">COMINCIA</button>
+        <button className="submit-btn">START THE TEST</button>
       </form>
     </div>
   );
