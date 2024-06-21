@@ -37,12 +37,12 @@
 }
 
 .error-msg {
-  color:red;
+  color: red;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.submit-btn{
+.submit-btn {
   margin-top: 20px;
   padding: 20px 20px;
   width: 100%;
@@ -54,13 +54,13 @@
   border-radius: 7px;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
   background-color: #244354;
   color: #e1e9ee;
   cursor: pointer;
 }
 
-.submit-btn:active{
+.submit-btn:active {
   background-color: black;
   box-shadow: none;
 }
